@@ -1,19 +1,23 @@
 "use client"
+import React,{ useContext, useEffect }  from 'react';
 import styles from './page.module.scss';
+import UserContext from './context/UserContext';
+import CheckContext from './components/CheckContext';
 
 export default function Home() {
 
-  const handleClick = () => {
-    console.log('click');
-  }
+  const { contextUser } = useContext(UserContext);
+
+  useEffect(() => {
+
+  }, [contextUser])
+
+  console.log(contextUser)
 
   return (
     <>
       <div className={styles.main}>
-        hello world
-      </div>
-      <div onClick={handleClick}>
-        click to set
+        <CheckContext />
       </div>
     </>
   )
