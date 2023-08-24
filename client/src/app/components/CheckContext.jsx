@@ -4,12 +4,14 @@ import UserContext from '../context/UserContext';
 
 export default function CheckContext() {
 
-const { setContextUser } = useContext(UserContext);
+  const { setContextUser } = useContext(UserContext);
+
+  const handleClick = () => {
+    setContextUser({userName: 'michael', age: 43});
+  }
 
   return (
-    <div onClick={() => {
-        setContextUser({userName: 'michael', age: 43})
-      }}>
+    <div onClick={handleClick}>
         click to set
     </div>
   )
