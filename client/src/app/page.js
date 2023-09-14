@@ -1,8 +1,9 @@
 "use client"
 import React,{ useContext, useEffect }  from 'react';
-import styles from './page.module.scss';
+//import styles from './page.module.scss';
 import UserContext from './context/UserContext';
-import CheckContext from './components/CheckContext';
+import CheckContext from './components/LogInForm/Index';
+import CalloutBox from './components/CalloutBox';
 
 export default function Home() {
 
@@ -16,9 +17,9 @@ export default function Home() {
 
   return (
     <>
-      <div className={styles.main}>
+      <CalloutBox>
         <CheckContext />
-      </div>
+      </CalloutBox>
     </>
   )
 }
