@@ -1,15 +1,12 @@
 "use client"
 import React from 'react';
-import CheckContext from './components/LogInForm/Index';
-import CalloutBox from './components/CalloutBox';
+import LogInForm from './components/LogInForm';
 
 export default function Home() {
 
   return (
     <>
-      <CalloutBox>
-        <CheckContext />
-      </CalloutBox>
+      <LogInForm />
     </>
   )
 }

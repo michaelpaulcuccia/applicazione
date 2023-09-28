@@ -1,3 +1,40 @@
+.flexWrapper {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (min-width: 960px) {
+        flex-direction: row;
+        margin: 48px 0;
+    }
+}
+
+.introBanner {
+    padding-right: 0;
+    padding-top: 12px;
+
+    @media (min-width: 960px) {
+        padding-right: 18px;
+        padding-top: 0;
+    }
+
+    h3 {
+        font-weight: 600;
+    }
+}
+
+
+.formContainer {
+    border: solid 1px black;
+    border-radius: 8px;
+    padding: 20px 10px;
+    width: 100%;
+
+    @media (min-width: 960px) {
+        width: 50%;
+    }
+}
+
 .flex {
     display: flex;
     flex-direction: column;

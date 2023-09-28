@@ -23,35 +23,42 @@ export default function Index() {
   }
 
   return (
-    <div>
-      <form 
-        onSubmit={handleSubmit}
-      >
-        <div
-          className={styles.flex}
-        >
-          <label htmlFor='inputUserName'>Name</label>
-            <input 
-              type='text' 
-              value={inputUserName} 
-              onChange={(event) => setInputUserName(event.target.value)} 
-            />
-            <label htmlFor='inputPass'>Password</label>
-            <input 
-              type='password'
-              minLength={8}
-              required 
-              value={inputPass} 
-              onChange={(event) => setInputPass(event.target.value)} 
-
-            />
+    <>
+      <div className={styles.flexWrapper}>
+        <div className={styles.introBanner}>
+          <h3>welcome!</h3>
+          <p>please login to connect with our application</p>
         </div>
-        <input 
-          className='btn-1'
-          type='submit' 
-          value='Login'
-        />
-      </form>
-    </div>
+        <div className={styles.formContainer}>
+          <form 
+            onSubmit={handleSubmit}
+          >
+             <div
+              className={styles.flex}
+            >
+              <label htmlFor='inputUserName'>Name</label>
+                <input 
+                  type='text' 
+                  value={inputUserName} 
+                  onChange={(event) => setInputUserName(event.target.value)} 
+                />
+                <label htmlFor='inputPass'>Password</label>
+                <input 
+                  type='password'
+                  minLength={8}
+                  required 
+                  value={inputPass} 
+                  onChange={(event) => setInputPass(event.target.value)} 
+                />
+            </div>
+            <input 
+              className='btn-1'
+              type='submit' 
+              value='Login'
+            />
+          </form>
+        </div>
+      </div>
+    </>
   )
 }
