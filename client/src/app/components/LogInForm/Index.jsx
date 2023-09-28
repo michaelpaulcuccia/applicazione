@@ -1,5 +1,6 @@
 "use client"
 import React,{ useState, useContext}  from 'react';
+import { useRouter } from 'next/navigation';
 import UserContext from '../../context/UserContext';
 import styles from './styles.module.scss';
 
@@ -7,15 +8,18 @@ export default function Index() {
 
   const { setContextUser } = useContext(UserContext);
 
+  const router = useRouter();
+
   const [inputUserName, setInputUserName] = useState('')
-  const [inputAge, setInputAge] = useState('')
+  const [inputPass, setInputPass] = useState('')
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setContextUser({ inputUserName, inputAge })
+    setContextUser({ inputUserName, inputPass })
     //clears form
     setInputUserName('');
-    setInputAge('')
+    setInputPass('');
+    router.push(`/users/${inputUserName}`);
   }
 
   return (
@@ -32,13 +36,13 @@ export default function Index() {
               value={inputUserName} 
               onChange={(event) => setInputUserName(event.target.value)} 
             />
-            <label htmlFor='inputAge'>Password</label>
+            <label htmlFor='inputPass'>Password</label>
             <input 
               type='password'
               minLength={8}
               required 
-              value={inputAge} 
-              onChange={(event) => setInputAge(event.target.value)} 
+              value={inputPass} 
+              onChange={(event) => setInputPass(event.target.value)} 
 
             />
         </div>
