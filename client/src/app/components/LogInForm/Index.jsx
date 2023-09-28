@@ -19,7 +19,7 @@ export default function Index() {
   }
 
   return (
-    <div >
+    <div>
       <form 
         onSubmit={handleSubmit}
       >
@@ -34,12 +34,19 @@ export default function Index() {
             />
             <label htmlFor='inputAge'>Password</label>
             <input 
-              type='number' 
+              type='password'
+              minLength={8}
+              required 
               value={inputAge} 
               onChange={(event) => setInputAge(event.target.value)} 
+
             />
         </div>
-        <input type='submit' value='Login' />
+        <input 
+          className='btn-1'
+          type='submit' 
+          value='Login'
+        />
       </form>
     </div>
   )

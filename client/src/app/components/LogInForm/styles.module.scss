@@ -1,4 +1,14 @@
 .flex {
     display: flex;
     flex-direction: column;
+
+    label {
+        padding-bottom: 4px;
+    }
+
+    input {
+        margin-bottom: 8px;
+        padding: 4px 0;
+    }
 }
+
