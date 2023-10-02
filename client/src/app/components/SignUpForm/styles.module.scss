@@ -1,0 +1,29 @@
+.root {
+    margin: 24px auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 20px 10px;
+    width: 100%;
+    
+    @media (min-width: 960px) {
+        width: 50%;
+    }
+
+    h3 {
+        padding-bottom: 12px;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        padding-bottom: 4px;
+    }
+
+    input {
+        margin-bottom: 8px;
+        padding: 4px 0;
+    }
+}

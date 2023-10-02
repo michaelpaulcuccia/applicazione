@@ -1,6 +1,7 @@
 "use client"
 import React,{ useState, useContext}  from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import UserContext from '../../context/UserContext';
 import styles from './styles.module.scss';
 
@@ -10,8 +11,8 @@ export default function Index() {
 
   const router = useRouter();
 
-  const [inputUserName, setInputUserName] = useState('')
-  const [inputPass, setInputPass] = useState('')
+  const [inputUserName, setInputUserName] = useState('');
+  const [inputPass, setInputPass] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -57,6 +58,7 @@ export default function Index() {
               value='Login'
             />
           </form>
+          <p>not a member? please <Link className='next-link' href='/signup'>sign up</Link></p>
         </div>
       </div>
     </>
